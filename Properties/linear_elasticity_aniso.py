@@ -1,7 +1,8 @@
 import sys
 import numpy
 
-class linear_elasticity_aniso:
+
+class LinearElasticityAniso:
     def __init__(self):
         self.__Cijkl = numpy.zeros((6, 6), dtype=float)    # stiffness tensor
         self.__E = numpy.zeros(3, dtype=float)             # Young's moduli

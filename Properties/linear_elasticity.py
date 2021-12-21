@@ -1,4 +1,4 @@
-class linear_elasticity:
+class LinearElasticity:
     def __init__(self):
         self.__E = 0.0        # Young's modulus
         self.__nu = 0.0       # Poisson's ratio
