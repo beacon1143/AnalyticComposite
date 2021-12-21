@@ -1,9 +1,9 @@
-import linear_elasticity
-import linear_elasticity_aniso
+import isotropic_material
+import anisotropic_material
 
-le = linear_elasticity.linear_elasticity()
-le.set_E_nu(1.0, 0.25)
-print(le.get_K())
+im = isotropic_material.isotropic_material()
+im.elastic_props.set_E_nu(1.0, 0.25)
+print(im.elastic_props.get_K())
 
-lea = linear_elasticity_aniso.linear_elasticity_aniso()
-lea.print_Cijkl()
+am = anisotropic_material.anisotropic_material()
+am.elastic_props.print_Cijkl()
