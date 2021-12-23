@@ -8,7 +8,7 @@ class Composite:
         self._gamma = gamma
         self.matr = isotropic_material.IsotropicMaterial()
         self.incl = isotropic_material.IsotropicMaterial()
-        self.effective = anisotropic_material.AnisotropicMaterial()
+        self.eff = anisotropic_material.AnisotropicMaterial()
 
     def compute_eff_elast(self):
         raise NotImplementedError('Error! Function calc_eff_elast is not implemented in base class Composite!\n')

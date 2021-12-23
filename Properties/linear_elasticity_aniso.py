@@ -61,10 +61,25 @@ class LinearElasticityAniso:
             for j in range(0, 2):
                 self.nu[i, j] = -self.E[i] * Dij[i, j + (j >= i)]
 
+    def get_tensor_comps(i):
+        if i < 0 or i > 5:
+            raise ValueError('Error! Index must be between 0 and 5!')
+        elif i < 3:
+            return str(i + 1) + str(i + 1)
+        elif i == 3:
+            return '12'
+        elif i == 4:
+            return '13'
+        elif i == 5:
+            return '23'
+        else:
+            return ''
+
     def print_Cijkl(self):
         for i in range(0, 6):
             for j in range(i, 6):
-                print('C_', i + 1, j + 1, ' = ', self.__Cijkl[i, j], sep='')
+                print('C_', LinearElasticityAniso.get_tensor_comps(i),
+                      LinearElasticityAniso.get_tensor_comps(j), ' = ', self.__Cijkl[i, j], sep='')
 
     def print_ortho(self):
         for i in range(0, 3):

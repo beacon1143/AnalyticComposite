@@ -13,6 +13,6 @@ try:
     fc.incl.el_props.set_E_nu(2000.0, 0.2)
     fc.matr.el_props.set_E_nu(2.0, 0.3)
     fc.compute_eff_elast()
-    fc.effective.el_props.print_ortho()
+    fc.eff.el_props.print_Cijkl()
 except BaseException as e:
     print(e)
